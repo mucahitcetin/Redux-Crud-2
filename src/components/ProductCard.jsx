@@ -39,12 +39,16 @@ const ProductCard = ({ dt }) => {
       </div>
       <div
         onClick={() => setOpenEdit(!openEdit)}
-        className="absolute top-0 right-2"
+        className="absolute bottom-4 right-2"
       >
-        <BsThreeDots color="indigo" size={24} />
+        <BsThreeDots
+          color="indigo"
+          size={28}
+          className="transition hover:scale-125 cursor-pointer"
+        />
       </div>
       {openEdit && (
-        <div className="bg-indigo-600 border border-white text-white absolute top-5 right-2 p-2 text-sm">
+        <div className="bg-indigo-600 border border-white text-white absolute bottom-12 right-2 p-2 text-sm">
           <div
             onClick={() => dispatch(deleteDataFunc(dt?.id))}
             className="cursor-pointer"
